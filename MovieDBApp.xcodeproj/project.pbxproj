@@ -30,9 +30,29 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		68CB7B6D2E284CEA006B21E0 /* MovieDBApp */ = {
+		6873CB7B2E285CFA006491F6 /* App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MovieDBApp;
+			path = App;
+			sourceTree = "<group>";
+		};
+		6873CB832E285D11006491F6 /* Core */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Core;
+			sourceTree = "<group>";
+		};
+		6873CB8D2E285D34006491F6 /* Features */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Features;
+			sourceTree = "<group>";
+		};
+		6873CB902E285D48006491F6 /* Networking */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		6873CB942E285D4F006491F6 /* Resources */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		68CB7B832E284CEB006B21E0 /* MovieDBAppTests */ = {
@@ -75,7 +95,11 @@
 		68CB7B622E284CEA006B21E0 = {
 			isa = PBXGroup;
 			children = (
-				68CB7B6D2E284CEA006B21E0 /* MovieDBApp */,
+				6873CB7B2E285CFA006491F6 /* App */,
+				6873CB832E285D11006491F6 /* Core */,
+				6873CB8D2E285D34006491F6 /* Features */,
+				6873CB902E285D48006491F6 /* Networking */,
+				6873CB942E285D4F006491F6 /* Resources */,
 				68CB7B832E284CEB006B21E0 /* MovieDBAppTests */,
 				68CB7B8D2E284CEB006B21E0 /* MovieDBAppUITests */,
 				68CB7B6C2E284CEA006B21E0 /* Products */,
@@ -108,7 +132,11 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				68CB7B6D2E284CEA006B21E0 /* MovieDBApp */,
+				6873CB7B2E285CFA006491F6 /* App */,
+				6873CB832E285D11006491F6 /* Core */,
+				6873CB8D2E285D34006491F6 /* Features */,
+				6873CB902E285D48006491F6 /* Networking */,
+				6873CB942E285D4F006491F6 /* Resources */,
 			);
 			name = MovieDBApp;
 			packageProductDependencies = (
@@ -175,6 +203,7 @@
 				TargetAttributes = {
 					68CB7B6A2E284CEA006B21E0 = {
 						CreatedOnToolsVersion = 16.2;
+						LastSwiftMigration = 1620;
 					};
 					68CB7B7F2E284CEB006B21E0 = {
 						CreatedOnToolsVersion = 16.2;
@@ -393,9 +422,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MovieDBApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = QM32QARALA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -412,6 +442,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.karimrizk.MovieDBApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -422,9 +453,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MovieDBApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = QM32QARALA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
