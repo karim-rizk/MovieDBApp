@@ -123,6 +123,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68CB7B942E284CEB006B21E0 /* Build configuration list for PBXNativeTarget "MovieDBApp" */;
 			buildPhases = (
+				68A468142E297A9400DD4DAA /* SwiftGen */,
 				68CB7B672E284CEA006B21E0 /* Sources */,
 				68CB7B682E284CEA006B21E0 /* Frameworks */,
 				68CB7B692E284CEA006B21E0 /* Resources */,
@@ -221,9 +222,12 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 68CB7B622E284CEA006B21E0;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 68CB7B6C2E284CEA006B21E0 /* Products */;
 			projectDirPath = "";
@@ -259,6 +263,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		68A468142E297A9400DD4DAA /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PROJECT_DIR}/swiftgen.yml",
+				"${PROJECT_DIR}/Resources/Localization/en.lproj/Localizable.strings",
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${PROJECT_DIR}/Core/Generated/Strings.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run SwiftGen using Mint\nif [ -x /opt/homebrew/bin/mint ]; then\n  /opt/homebrew/bin/mint run swiftgen config run --config \"${PROJECT_DIR}/swiftgen.yml\"\nelse\n  echo \"⚠️ Mint is not installed. Please run: brew install mint\"\n  exit 1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		68CB7B672E284CEA006B21E0 /* Sources */ = {
