@@ -55,6 +55,11 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		68A468492E2A88B200DD4DAA /* Scripts */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Scripts;
+			sourceTree = "<group>";
+		};
 		68CB7B832E284CEB006B21E0 /* MovieDBAppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = MovieDBAppTests;
@@ -100,6 +105,7 @@
 				6873CB8D2E285D34006491F6 /* Features */,
 				6873CB902E285D48006491F6 /* Networking */,
 				6873CB942E285D4F006491F6 /* Resources */,
+				68A468492E2A88B200DD4DAA /* Scripts */,
 				68CB7B832E284CEB006B21E0 /* MovieDBAppTests */,
 				68CB7B8D2E284CEB006B21E0 /* MovieDBAppUITests */,
 				68CB7B6C2E284CEA006B21E0 /* Products */,
@@ -138,6 +144,7 @@
 				6873CB8D2E285D34006491F6 /* Features */,
 				6873CB902E285D48006491F6 /* Networking */,
 				6873CB942E285D4F006491F6 /* Resources */,
+				68A468492E2A88B200DD4DAA /* Scripts */,
 			);
 			name = MovieDBApp;
 			packageProductDependencies = (
@@ -281,6 +288,7 @@
 			);
 			outputPaths = (
 				"${PROJECT_DIR}/Core/Generated/Strings.swift",
+				"${PROJECT_DIR}/Core/Generated/Assets.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

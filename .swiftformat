@@ -1,0 +1,17 @@
+# Enable formatting rules
+--swiftversion 5.9
+--exclude Core/Generated
+
+# Indentation & alignment
+--indent 2
+--wraparguments before-first
+--wrapcollections before-first
+
+# Rules to enable
+--enable all
+
+# Rules to disable (if needed)
+--disable redundantSelf,blankLinesAtStartOfScope
+
+# Misc
+--header ignore
