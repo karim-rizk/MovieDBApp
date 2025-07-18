@@ -1,0 +1,8 @@
+$(SRCROOT)/App
+$(SRCROOT)/Core
+$(SRCROOT)/Features
+$(SRCROOT)/Networking
+$(SRCROOT)/Resources
+$(SRCROOT)/MovieDBAppTests
+$(SRCROOT)/MovieDBAppUITests
+$(SRCROOT)/.swiftlint.yml

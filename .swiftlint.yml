@@ -1,0 +1,41 @@
+disabled_rules: # globally disabled rules
+  - trailing_whitespace
+  - line_length
+  - identifier_name
+  - force_cast
+  - force_try
+  - legacy_objc_type
+  - opening_brace
+  - cyclomatic_complexity
+  - function_body_length
+  - type_body_length
+  - file_length
+
+opt_in_rules:
+  - empty_count
+  - explicit_init
+  - fatal_error_message
+  - first_where
+  - sorted_first_last
+  - toggle_bool
+
+included:
+  - App
+  - Core
+  - Features
+  - Networking
+  - Resources
+  - DTOs
+  - MovieDBAppTests
+  - MovieDBAppUITests
+
+excluded:
+  - Core/Generated
+  - Scripts
+  - .build
+  - Carthage
+  - Pods
+  - fastlane
+  - DerivedData
+
+reporter: xcode

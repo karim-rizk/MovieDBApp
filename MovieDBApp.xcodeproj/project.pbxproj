@@ -130,6 +130,7 @@
 			buildConfigurationList = 68CB7B942E284CEB006B21E0 /* Build configuration list for PBXNativeTarget "MovieDBApp" */;
 			buildPhases = (
 				68A468142E297A9400DD4DAA /* SwiftGen */,
+				68A4684B2E2A8F3E00DD4DAA /* SwiftLint */,
 				68CB7B672E284CEA006B21E0 /* Sources */,
 				68CB7B682E284CEA006B21E0 /* Frameworks */,
 				68CB7B692E284CEA006B21E0 /* Resources */,
@@ -293,6 +294,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run SwiftGen using Mint\nif [ -x /opt/homebrew/bin/mint ]; then\n  /opt/homebrew/bin/mint run swiftgen config run --config \"${PROJECT_DIR}/swiftgen.yml\"\nelse\n  echo \"⚠️ Mint is not installed. Please run: brew install mint\"\n  exit 1\nfi\n";
+		};
+		68A4684B2E2A8F3E00DD4DAA /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/Scripts/SwiftLintInput.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/swiftlint-output.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -x /opt/homebrew/bin/mint ]; then\n  cd \"${SRCROOT}\" || exit 1\n  /opt/homebrew/bin/mint run swiftlint --config .swiftlint.yml --quiet --reporter xcode\n\n  # ✅ Dummy output file to silence Xcode build warning\n  touch \"${DERIVED_FILE_DIR}/swiftlint-output.txt\"\nelse\n  echo \"⚠️ Mint not found. Skipping SwiftLint.\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

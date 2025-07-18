@@ -11,7 +11,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "cd &quot;${SRCROOT}&quot; || exit 1&#10;./Scripts/lint.sh&#10;">
+               scriptText = "cd &quot;${SRCROOT}&quot; || exit 1&#10;./Scripts/format.sh&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
