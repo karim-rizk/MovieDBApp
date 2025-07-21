@@ -64,3 +64,6 @@ fastlane/test_output
 
 # SwiftGen generated files
 Core/Generated/
+
+# Exclude sensitive config
+Configuration/Environment.xcconfig

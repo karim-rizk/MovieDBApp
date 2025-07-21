@@ -24,6 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		688B7E312E2E93EA00869278 /* MovieDBApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MovieDBApp-Info.plist"; sourceTree = "<group>"; };
 		68CB7B6B2E284CEA006B21E0 /* MovieDBApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDBApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68CB7B802E284CEB006B21E0 /* MovieDBAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieDBAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68CB7B8A2E284CEB006B21E0 /* MovieDBAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieDBAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +54,11 @@
 		6873CB942E285D4F006491F6 /* Resources */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		688B7E2B2E2D995800869278 /* Configuration */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		68A468492E2A88B200DD4DAA /* Scripts */ = {
@@ -100,12 +106,14 @@
 		68CB7B622E284CEA006B21E0 = {
 			isa = PBXGroup;
 			children = (
+				688B7E312E2E93EA00869278 /* MovieDBApp-Info.plist */,
 				6873CB7B2E285CFA006491F6 /* App */,
 				6873CB832E285D11006491F6 /* Core */,
 				6873CB8D2E285D34006491F6 /* Features */,
 				6873CB902E285D48006491F6 /* Networking */,
 				6873CB942E285D4F006491F6 /* Resources */,
 				68A468492E2A88B200DD4DAA /* Scripts */,
+				688B7E2B2E2D995800869278 /* Configuration */,
 				68CB7B832E284CEB006B21E0 /* MovieDBAppTests */,
 				68CB7B8D2E284CEB006B21E0 /* MovieDBAppUITests */,
 				68CB7B6C2E284CEA006B21E0 /* Products */,
@@ -145,6 +153,7 @@
 				6873CB8D2E285D34006491F6 /* Features */,
 				6873CB902E285D48006491F6 /* Networking */,
 				6873CB942E285D4F006491F6 /* Resources */,
+				688B7E2B2E2D995800869278 /* Configuration */,
 				68A468492E2A88B200DD4DAA /* Scripts */,
 			);
 			name = MovieDBApp;
@@ -357,6 +366,8 @@
 /* Begin XCBuildConfiguration section */
 		68CB7B922E284CEB006B21E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 688B7E2B2E2D995800869278 /* Configuration */;
+			baseConfigurationReferenceRelativePath = Environment.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -420,6 +431,8 @@
 		};
 		68CB7B932E284CEB006B21E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 688B7E2B2E2D995800869278 /* Configuration */;
+			baseConfigurationReferenceRelativePath = Environment.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -476,6 +489,8 @@
 		};
 		68CB7B952E284CEB006B21E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 688B7E2B2E2D995800869278 /* Configuration */;
+			baseConfigurationReferenceRelativePath = Environment.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -486,6 +501,7 @@
 				DEVELOPMENT_TEAM = QM32QARALA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MovieDBApp-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -507,6 +523,8 @@
 		};
 		68CB7B962E284CEB006B21E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 688B7E2B2E2D995800869278 /* Configuration */;
+			baseConfigurationReferenceRelativePath = Environment.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -517,6 +535,7 @@
 				DEVELOPMENT_TEAM = QM32QARALA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MovieDBApp-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -537,6 +556,8 @@
 		};
 		68CB7B982E284CEB006B21E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 688B7E2B2E2D995800869278 /* Configuration */;
+			baseConfigurationReferenceRelativePath = Environment.xcconfig;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -556,6 +577,8 @@
 		};
 		68CB7B992E284CEB006B21E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 688B7E2B2E2D995800869278 /* Configuration */;
+			baseConfigurationReferenceRelativePath = Environment.xcconfig;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -575,6 +598,8 @@
 		};
 		68CB7B9B2E284CEB006B21E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 688B7E2B2E2D995800869278 /* Configuration */;
+			baseConfigurationReferenceRelativePath = Environment.xcconfig;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -592,6 +617,8 @@
 		};
 		68CB7B9C2E284CEB006B21E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 688B7E2B2E2D995800869278 /* Configuration */;
+			baseConfigurationReferenceRelativePath = Environment.xcconfig;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
