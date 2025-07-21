@@ -65,5 +65,5 @@ Bundle.main.object(forInfoDictionaryKey: "TMDB_API_READ_ACCESS_TOKEN")
 This app uses the TMDB API but is **not endorsed or certified** by TMDB.
 
 <p align="left">
-  <img src="https://www.themoviedb.org/assets/2/v4/logos/stacked-blue-e3d1c2744b8d31a2a6cf3a233f4ddcbac6c34a2eb47c1e6f6c60e5a57e9572b3.svg" alt="TMDB Logo" width="160"/>
+  <img src="Assets/tmdb-logo.svg" alt="TMDB Logo" width="180"/>
 </p>
