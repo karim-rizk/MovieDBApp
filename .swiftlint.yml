@@ -22,10 +22,9 @@ opt_in_rules:
 included:
   - App
   - Core
+  - Data
   - Features
-  - Networking
   - Resources
-  - DTOs
   - MovieDBAppTests
   - MovieDBAppUITests
 

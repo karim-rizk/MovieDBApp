@@ -46,11 +46,6 @@
 			path = Features;
 			sourceTree = "<group>";
 		};
-		6873CB902E285D48006491F6 /* Networking */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Networking;
-			sourceTree = "<group>";
-		};
 		6873CB942E285D4F006491F6 /* Resources */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Resources;
@@ -59,6 +54,11 @@
 		688B7E2B2E2D995800869278 /* Configuration */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		6892E2AA2E314F4600F8C92E /* Data */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		68A468492E2A88B200DD4DAA /* Scripts */ = {
@@ -109,8 +109,8 @@
 				688B7E312E2E93EA00869278 /* MovieDBApp-Info.plist */,
 				6873CB7B2E285CFA006491F6 /* App */,
 				6873CB832E285D11006491F6 /* Core */,
+				6892E2AA2E314F4600F8C92E /* Data */,
 				6873CB8D2E285D34006491F6 /* Features */,
-				6873CB902E285D48006491F6 /* Networking */,
 				6873CB942E285D4F006491F6 /* Resources */,
 				68A468492E2A88B200DD4DAA /* Scripts */,
 				688B7E2B2E2D995800869278 /* Configuration */,
@@ -151,9 +151,9 @@
 				6873CB7B2E285CFA006491F6 /* App */,
 				6873CB832E285D11006491F6 /* Core */,
 				6873CB8D2E285D34006491F6 /* Features */,
-				6873CB902E285D48006491F6 /* Networking */,
 				6873CB942E285D4F006491F6 /* Resources */,
 				688B7E2B2E2D995800869278 /* Configuration */,
+				6892E2AA2E314F4600F8C92E /* Data */,
 				68A468492E2A88B200DD4DAA /* Scripts */,
 			);
 			name = MovieDBApp;

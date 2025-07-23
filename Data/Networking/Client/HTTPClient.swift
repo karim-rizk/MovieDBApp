@@ -9,5 +9,5 @@ import Combine
 import Foundation
 
 public protocol HTTPClient {
-  func get<T: Decodable>(_ endpoint: HTTPEndpoint) -> AnyPublisher<T, Error> where T: Decodable
+  func get<T: Decodable>(_ endpoint: HTTPEndpoint) -> AnyPublisher<T, Error>
 }
