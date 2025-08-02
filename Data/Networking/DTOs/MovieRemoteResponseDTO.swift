@@ -7,20 +7,16 @@
 
 import Foundation
 
-public struct MovieRemoteResponseDTO: Decodable {
-  // MARK: Public
-
-  public let page: Int
-  public let results: [MovieRemoteDTO]
-  public let totalPages: Int
-  public let totalResults: Int
-
-  // MARK: Internal
-
+struct MovieRemoteResponseDTO: Decodable {
   enum CodingKeys: String, CodingKey {
     case page
     case results
     case totalPages = "total_pages"
     case totalResults = "total_results"
   }
+
+  let page: Int
+  let results: [MovieRemoteDTO]
+  let totalPages: Int
+  let totalResults: Int
 }

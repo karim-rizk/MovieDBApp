@@ -7,25 +7,7 @@
 
 import Foundation
 
-public struct MovieRemoteDTO: Decodable, Identifiable {
-  // MARK: Public
-
-  public let id: Int
-  public let title: String
-  public let overview: String
-  public let posterPath: String?
-  public let backdropPath: String?
-  public let releaseDate: String
-  public let voteAverage: Double
-  public let voteCount: Int
-  public let popularity: Double
-  public let adult: Bool
-  public let genreIDs: [Int]
-  public let originalTitle: String
-  public let originalLanguage: String
-
-  // MARK: Internal
-
+struct MovieRemoteDTO: Decodable, Identifiable {
   enum CodingKeys: String, CodingKey {
     case id
     case title
@@ -41,4 +23,18 @@ public struct MovieRemoteDTO: Decodable, Identifiable {
     case originalTitle = "original_title"
     case originalLanguage = "original_language"
   }
+
+  let id: Int
+  let title: String
+  let overview: String
+  let posterPath: String?
+  let backdropPath: String?
+  let releaseDate: String
+  let voteAverage: Double
+  let voteCount: Int
+  let popularity: Double
+  let adult: Bool
+  let genreIDs: [Int]
+  let originalTitle: String
+  let originalLanguage: String
 }
