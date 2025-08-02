@@ -1,5 +1,5 @@
 //
-//  APISecrets.swift
+//  AppEnvironment.swift
 //  MovieDBApp
 //
 //  Created by Karim Rizk on 20.07.25.
@@ -7,8 +7,10 @@
 
 import Foundation
 
-enum APISecrets {
+enum AppEnvironment {
   // MARK: Internal
+
+  static let baseURL: URL = .init(string: "https://api.themoviedb.org/3")!
 
   static var tmdbToken: String {
     guard let token = Bundle.main.object(forInfoDictionaryKey: key) as? String, token.hasPrefix("eyJ") else {
