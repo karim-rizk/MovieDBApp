@@ -1,7 +1,7 @@
 $(SRCROOT)/App
 $(SRCROOT)/Core
 $(SRCROOT)/Features
-$(SRCROOT)/Networking
+$(SRCROOT)/Data
 $(SRCROOT)/Resources
 $(SRCROOT)/MovieDBAppTests
 $(SRCROOT)/MovieDBAppUITests

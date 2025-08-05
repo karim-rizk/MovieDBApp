@@ -34,6 +34,7 @@ struct MovieListView: View {
   @StateObject private var viewModel: MovieListViewModel
 }
 
-// #Preview {
-//  MovieListView()
-// }
+#Preview {
+  let viewModel = MovieListViewModel(movieService: MockMovieService())
+  MovieListView(viewModel: viewModel)
+}
