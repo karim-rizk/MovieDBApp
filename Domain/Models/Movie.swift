@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - Movie
+
 public struct Movie: Identifiable, Equatable {
   public let id: Int
   public let title: String
@@ -17,4 +19,12 @@ public struct Movie: Identifiable, Equatable {
   public let voteAverage: Double
   public let voteCount: Int
   public let genreIDs: [Int]
+}
+
+// MARK: - PaginatedMovies
+
+public struct PaginatedMovies {
+  public let page: Int
+  public let totalPages: Int
+  public let movies: [Movie]
 }

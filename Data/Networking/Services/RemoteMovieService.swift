@@ -17,19 +17,19 @@ public final class RemoteMovieService: MovieServiceProtocol {
 
   // MARK: Public
 
-  public func getPopularMovies() -> AnyPublisher<[Movie], Error> {
+  public func getPopularMovies(at page: Int) -> AnyPublisher<PaginatedMovies, Error> {
     let endpoint = HTTPEndpoint(
       path: "/movie/popular",
       queryItems: [
         URLQueryItem(name: "language", value: "en-US"),
-        URLQueryItem(name: "page", value: "1"),
+        URLQueryItem(name: "page", value: String(page)),
       ]
     )
 
     return httpClient
       .get(endpoint)
       .map { (dto: MovieRemoteResponseDTO) in
-        dto.toDomain()
+        PaginatedMovies(page: dto.page, totalPages: dto.totalPages, movies: dto.toDomain())
       }
       .eraseToAnyPublisher()
   }

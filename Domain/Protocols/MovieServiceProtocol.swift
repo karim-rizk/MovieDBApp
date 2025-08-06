@@ -9,5 +9,5 @@ import Combine
 import Foundation
 
 public protocol MovieServiceProtocol {
-  func getPopularMovies() -> AnyPublisher<[Movie], Error>
+  func getPopularMovies(at page: Int) -> AnyPublisher<PaginatedMovies, Error>
 }

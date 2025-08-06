@@ -8,6 +8,7 @@
 import SwiftUI
 
 enum MovieListComposer {
+  @MainActor
   static func composeView() -> some View {
     let httpClient: HTTPClient = URLSessionHTTPClient(baseURL: AppEnvironment.baseURL, accessToken: AppEnvironment.tmdbToken)
 

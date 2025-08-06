@@ -7,6 +7,7 @@
 import Combine
 import Foundation
 
+@MainActor
 final class MovieListViewModel: ObservableObject {
   // MARK: Lifecycle
 
@@ -21,11 +22,42 @@ final class MovieListViewModel: ObservableObject {
   @Published private(set) var errorMessage: String?
   @Published private(set) var isLoading: Bool = false
 
-  func fetchPopularMovies() {
+  func fetchInitialMoviesIfNeeded() {
+    guard movies.isEmpty else {
+      return
+    }
+
+    fetchPopularMovies()
+  }
+
+  func fetchNextPageIfNeeded(currentItem: Movie) {
+    guard let lastItem = movies.last else {
+      return
+    }
+    guard currentItem.id == lastItem.id else {
+      return
+    }
+
+    fetchPopularMovies()
+  }
+
+  // MARK: Private
+
+  private var currentPage: Int = 1
+  private var totalPages: Int = 1
+  private let movieService: MovieServiceProtocol
+  private var cancellables: Set<AnyCancellable> = []
+
+  private func fetchPopularMovies() {
+    guard !isLoading, currentPage <= totalPages else {
+      return
+    }
+
     isLoading = true
     errorMessage = nil
 
-    movieService.getPopularMovies()
+    movieService
+      .getPopularMovies(at: currentPage)
       .receive(on: DispatchQueue.main)
       .sink { [weak self] completion in
         guard let self else {
@@ -36,14 +68,11 @@ final class MovieListViewModel: ObservableObject {
         if case let .failure(error) = completion {
           errorMessage = error.localizedDescription
         }
-      } receiveValue: { [weak self] movies in
-        self?.movies = movies
+      } receiveValue: { [weak self] result in
+        self?.movies += result.movies
+        self?.currentPage = result.page + 1
+        self?.totalPages = result.totalPages
       }
       .store(in: &cancellables)
   }
-
-  // MARK: Private
-
-  private let movieService: MovieServiceProtocol
-  private var cancellables: Set<AnyCancellable> = []
 }

@@ -24,8 +24,15 @@ struct MovieListView: View {
       List {
         ForEach(viewModel.movies) { movie in
           Text(movie.title)
+            .onAppear {
+              viewModel.fetchNextPageIfNeeded(currentItem: movie)
+            }
         }
-      }.navigationTitle(L10n.Home.Movies.title)
+      }
+      .navigationTitle(L10n.Home.Movies.title)
+      .onAppear {
+        viewModel.fetchInitialMoviesIfNeeded()
+      }
     }
   }
 
