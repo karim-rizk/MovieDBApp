@@ -22,6 +22,7 @@ opt_in_rules:
 included:
   - App
   - Core
+  - Domain
   - Data
   - Features
   - Resources
