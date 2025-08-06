@@ -45,6 +45,8 @@ final class MovieListViewModel: ObservableObject {
 
   private var currentPage: Int = 1
   private var totalPages: Int = 1
+  private var loadedMovieIDs: Set<Int> = []
+
   private let movieService: MovieServiceProtocol
   private var cancellables: Set<AnyCancellable> = []
 
@@ -69,10 +71,15 @@ final class MovieListViewModel: ObservableObject {
           errorMessage = error.localizedDescription
         }
       } receiveValue: { [weak self] result in
-        self?.movies += result.movies
+        self?.appendUniqueMovies(result.movies)
         self?.currentPage = result.page + 1
         self?.totalPages = result.totalPages
       }
       .store(in: &cancellables)
+  }
+
+  private func appendUniqueMovies(_ newMovies: [Movie]) {
+    let uniqueMovies = newMovies.filter { loadedMovieIDs.insert($0.id).inserted }
+    movies.append(contentsOf: uniqueMovies)
   }
 }
