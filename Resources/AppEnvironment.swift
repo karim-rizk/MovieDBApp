@@ -11,6 +11,9 @@ enum AppEnvironment {
   // MARK: Internal
 
   static let baseURL: URL = .init(string: "https://api.themoviedb.org/3")!
+  static let imageBaseURL: URL = .init(string: "https://image.tmdb.org/t/p")!
+  static let posterSize = "w500"
+  static let backdropSize = "w780"
 
   static var tmdbToken: String {
     guard let token = Bundle.main.object(forInfoDictionaryKey: key) as? String, token.hasPrefix("eyJ") else {

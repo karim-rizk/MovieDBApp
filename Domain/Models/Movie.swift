@@ -13,8 +13,8 @@ public struct Movie: Identifiable, Equatable {
   public let id: Int
   public let title: String
   public let overview: String
-  public let posterPath: String?
-  public let backdropPath: String?
+  public let posterURL: URL?
+  public let backdropURL: URL?
   public let releaseDate: String
   public let voteAverage: Double
   public let voteCount: Int
