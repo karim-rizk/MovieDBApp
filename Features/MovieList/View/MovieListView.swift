@@ -23,7 +23,7 @@ struct MovieListView: View {
     NavigationStack {
       List {
         ForEach(viewModel.movies) { movie in
-          Text(movie.title)
+          MovieRowView(movie: movie)
             .onAppear {
               viewModel.fetchNextPageIfNeeded(currentItem: movie)
             }
