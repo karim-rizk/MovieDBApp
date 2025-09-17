@@ -329,7 +329,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -x /opt/homebrew/bin/mint ]; then\n  cd \"${SRCROOT}\" || exit 1\n  /opt/homebrew/bin/mint run swiftlint --config .swiftlint.yml --quiet --reporter xcode\n\n  # ✅ Dummy output file to silence Xcode build warning\n  touch \"${DERIVED_FILE_DIR}/swiftlint-output.txt\"\nelse\n  echo \"⚠️ Mint not found. Skipping SwiftLint.\"\nfi\n";
+			shellScript = "set -euo pipefail\nexport PATH=\"/opt/homebrew/bin:$PATH\"\n\nunset SDKROOT\nunset TOOLCHAINS\nunset SWIFT_INCLUDE_PATHS || true\nexport DEVELOPER_DIR=\"$(xcode-select -p)\"\n\ncd \"${SRCROOT}\" || exit 1\n\n# Run the already-installed SwiftLint\nmint run realm/SwiftLint swiftlint --config .swiftlint.yml --reporter xcode --quiet || true\n\ntouch \"${DERIVED_FILE_DIR}/swiftlint-output.txt\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
