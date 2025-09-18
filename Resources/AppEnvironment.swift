@@ -17,7 +17,7 @@ enum AppEnvironment {
 
   static var tmdbToken: String {
     guard let token = Bundle.main.object(forInfoDictionaryKey: key) as? String, token.hasPrefix("eyJ") else {
-      fatalError("❌ '\(key)' is missing or invalid in Info.plist. Ensure it's injected via .xcconfig and Build Settings.")
+      fatalError("❌ '\(key)' is missing or invalid. Ensure it's injected via .xcconfig and Build Settings.")
     }
 
     return token

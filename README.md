@@ -61,6 +61,7 @@ cd "${SRCROOT}" || exit 1
 mint run realm/SwiftLint swiftlint --config .swiftlint.yml --reporter xcode --quiet || true
 
 touch "${DERIVED_FILE_DIR}/swiftlint-output.txt"
+```
 
 ---
 
@@ -85,11 +86,13 @@ At runtime, the token is accessed via:
 ```swift
 enum AppEnvironment {
     static var tmdbToken: String {
-        guard let token = Bundle.main.object(forInfoDictionaryKey: "TMDB_API_READ_ACCESS_TOKEN") as? String else {
-            fatalError("❌ API token missing – check your .xcconfig and Build Settings.")
+        guard let token = Bundle.main.object(forInfoDictionaryKey: key) as? String, token.hasPrefix("eyJ") else {
+        fatalError("❌ '\(key)' is missing or invalid. Ensure it's injected via .xcconfig and Build Settings.")
         }
-        return token
-    }
+
+    return token
+  }
+    private static let key = "TMDB_API_READ_ACCESS_TOKEN"
 }
 ```
 
